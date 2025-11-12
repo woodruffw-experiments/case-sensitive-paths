@@ -1,0 +1,22 @@
+name: hello
+
+on: [push, pull_request]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions: {}
+
+jobs:
+  neutral:
+    name: neutral
+    runs-on: ubuntu-latest
+    steps:
+      - uses: woodruffw-experiments/case-sensitive-paths/hello@main
+      
+      - uses: woodruffw-experiments/case-sensitive-paths/HELLO@main
+
+      - uses: woodruffw-experiments/case-sensitive-paths/Hello@main
+
+      - uses: woodruffw-experiments/case-sensitive-paths/hELLo@main
