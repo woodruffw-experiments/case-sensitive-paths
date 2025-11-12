@@ -9,7 +9,7 @@ concurrency:
 permissions: {}
 
 jobs:
-  neutral:
+  hello:
     name: neutral
     runs-on: ubuntu-latest
     steps:
@@ -17,6 +17,6 @@ jobs:
       
       - uses: woodruffw-experiments/case-sensitive-paths/HELLO@main
 
-      - uses: woodruffw-experiments/case-sensitive-paths/Hello@main
+      # - uses: woodruffw-experiments/case-sensitive-paths/Hello@main
 
-      - uses: woodruffw-experiments/case-sensitive-paths/hELLo@main
+      # - uses: woodruffw-experiments/case-sensitive-paths/hELLo@main
